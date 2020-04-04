@@ -40,6 +40,7 @@ type DependencyManifest struct {
 }
 
 type TinyDependency struct {
+	URL         string
 	Dependents  []string
 	DependencyN int
 }
@@ -121,14 +122,23 @@ func main() {
 	//depsGraph := make(map[string]map[string]struct{})
 	depsGraph := make(map[string]TinyDependency)
 
-	updateDepsGraph := func(crate, tomlURL string) error {
+	const github = "https://github.com"
+	const rawcontent = "https://raw.githubusercontent.com"
+
+	updateDepsGraph := func(crate, revision, tomlURL string) error {
 		deps, err := readDependencies(crate, tomlURL)
 		if err != nil {
 			return err
 		}
 
+		crateDependency := depsGraph[crate]
+
 		fmt.Println(crate, tomlURL)
 		//fmt.Println(deps)
+		//crateDependency.URL = tomlURL
+		crateDependency.URL = strings.ReplaceAll(
+			strings.ReplaceAll(tomlURL, "/"+revision+"/", "/blob/"+revision+"/"),
+			rawcontent, github)
 
 		for _, d := range deps {
 			if _, ok := dependencies[d]; !ok {
@@ -142,16 +152,17 @@ func main() {
 				depsGraph[crate][d] = struct{}{}
 			*/
 
-			x, y := depsGraph[crate], depsGraph[d]
-			x.DependencyN, y.Dependents = x.DependencyN+1, append(y.Dependents, crate)
-			depsGraph[crate], depsGraph[d] = x, y
+			crateDependency.DependencyN++
+
+			y := depsGraph[d]
+			y.Dependents = append(y.Dependents, crate)
+			depsGraph[d] = y
 		}
+
+		depsGraph[crate] = crateDependency
 
 		return nil
 	}
-
-	const github = "https://github.com"
-	const rawcontent = "https://raw.githubusercontent.com"
 
 	fmt.Println("#(deps) =", len(dependencies))
 
@@ -175,7 +186,7 @@ func main() {
 		}
 
 		if _, ok := sepecials[k]; !ok {
-			if err := updateDepsGraph(k, url+"/"+revision+"/Cargo.toml"); err == nil {
+			if err := updateDepsGraph(k, revision, url+"/"+revision+"/Cargo.toml"); err == nil {
 				continue
 			} else if k == cared {
 				fmt.Println("err0:", err, url+"/"+revision+"/"+"/Cargo.toml")
@@ -186,21 +197,21 @@ func main() {
 		if !ok {
 			kk = k
 		}
-		if err := updateDepsGraph(k, url+"/"+revision+"/"+kk+"/Cargo.toml"); err == nil {
+		if err := updateDepsGraph(k, revision, url+"/"+revision+"/"+kk+"/Cargo.toml"); err == nil {
 			continue
 		} else if k == cared {
 			fmt.Println("err1:", err, url+"/"+revision+"/"+kk+"/Cargo.toml")
 		}
 
 		crateName := strings.ReplaceAll(k, "-", "")
-		if err := updateDepsGraph(k, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
+		if err := updateDepsGraph(k, revision, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
 			continue
 		} else if k == cared {
 			fmt.Println("err2:", err, url+"/"+revision+"/"+crateName+"/Cargo.toml")
 		}
 
 		crateName = strings.ReplaceAll(k, "-", "_")
-		if err := updateDepsGraph(k, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
+		if err := updateDepsGraph(k, revision, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
 			continue
 		} else if k == cared {
 			fmt.Println("err3:", err, url+"/"+revision+"/"+crateName+"/Cargo.toml")

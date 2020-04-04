@@ -9,6 +9,7 @@ import (
 )
 
 type TinyDependency struct {
+	URL         string
 	Dependents  []string
 	DependencyN int
 }
@@ -33,6 +34,9 @@ func main() {
 		}
 	}
 
+	fmt.Println("no. | crate | versions")
+	fmt.Println("----|-------|---------")
+
 	oks := make(map[string]struct{})
 	for i := 0; i < len(dependencies); i++ {
 		if len(queue) == 0 {
@@ -54,7 +58,7 @@ func main() {
 		}
 
 		oks[ok] = struct{}{}
-		fmt.Printf("%03d: %s\n", i, ok)
+		fmt.Printf("%03d | [%s](%s) | \n", i, ok, dependencies[ok].URL)
 	}
 
 	fmt.Println("-------")

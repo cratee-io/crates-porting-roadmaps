@@ -1,30 +1,36 @@
 {
   "adler32": {
+    "URL": "https://github.com/mesalock-linux/adler32-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "miniz_oxide",
-      "deflate",
       "libflate",
+      "deflate",
+      "miniz_oxide",
       "inflate"
     ],
     "DependencyN": 0
   },
   "aead": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/aead/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "aes": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/aes/aes/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "aes-ctr": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/aes-ctr/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "aes-soft": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/aes/aes-soft/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "aesni": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/aes/aesni/Cargo.toml",
     "Dependents": [
       "aes-ctr",
       "aes"
@@ -32,276 +38,313 @@
     "DependencyN": 2
   },
   "aho-corasick": {
+    "URL": "https://github.com/mesalock-linux/aho-corasick-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "regex"
     ],
     "DependencyN": 1
   },
   "anyhow": {
+    "URL": "https://github.com/mesalock-linux/anyhow-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "array_tool": {
+    "URL": "https://github.com/mesalock-linux/array_tool-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "jsonpath_lib"
     ],
     "DependencyN": 0
   },
   "assert_matches": {
+    "URL": "https://github.com/mesalock-linux/assert_matches-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "base64": {
+    "URL": "https://github.com/mesalock-linux/rust-base64-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "jsonwebtoken",
-      "rustls"
+      "rustls",
+      "jsonwebtoken"
     ],
     "DependencyN": 0
   },
   "bincode": {
+    "URL": "https://github.com/mesalock-linux/bincode-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "bitvec": {
+    "URL": "https://github.com/mesalock-linux/bitvec-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "parity-scale-codec"
     ],
     "DependencyN": 1
   },
   "blake-hash": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/hashes/blake/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "blake2": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/blake2/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "blobby": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/blobby/Cargo.toml",
     "Dependents": [
-      "crypto-mac",
-      "block-cipher-trait",
       "digest",
-      "stream-cipher"
+      "crypto-mac",
+      "stream-cipher",
+      "block-cipher-trait"
     ],
     "DependencyN": 1
   },
   "block-buffer": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/block-buffer/Cargo.toml",
     "Dependents": [
-      "blake-hash",
-      "gost94",
-      "md-5",
-      "groestl-aesni",
-      "groestl",
-      "skein-hash",
-      "jh-x86_64",
-      "md4",
       "whirlpool",
-      "ripemd160",
-      "streebog",
-      "ripemd320",
+      "blake-hash",
+      "groestl-aesni",
       "sha2",
-      "sha3",
       "md2",
-      "sha-1"
+      "md4",
+      "jh-x86_64",
+      "ripemd320",
+      "gost94",
+      "ripemd160",
+      "groestl",
+      "sha-1",
+      "skein-hash",
+      "md-5",
+      "streebog",
+      "sha3"
     ],
     "DependencyN": 2
   },
   "block-cipher-trait": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/block-cipher-trait/Cargo.toml",
     "Dependents": [
-      "cfb-mode",
-      "block-modes",
       "twofish",
       "kuznyechik",
-      "threefish-cipher",
-      "aes-soft",
-      "ofb",
-      "blowfish",
-      "cfb8",
-      "rc2",
       "ctr",
-      "aesni",
-      "cmac",
-      "magma",
       "aes",
+      "ofb",
       "des",
-      "cast5"
+      "rc2",
+      "cmac",
+      "aesni",
+      "cfb-mode",
+      "aes-soft",
+      "cast5",
+      "magma",
+      "blowfish",
+      "threefish-cipher",
+      "cfb8",
+      "block-modes"
     ],
     "DependencyN": 1
   },
   "block-modes": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/block-modes/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "block-padding": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/block-padding/Cargo.toml",
     "Dependents": [
-      "block-modes",
+      "block-buffer",
       "skein-hash",
-      "block-buffer"
+      "block-modes"
     ],
     "DependencyN": 0
   },
   "blowfish": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/blowfish/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "byte-slice-cast": {
+    "URL": "https://github.com/mesalock-linux/byte-slice-cast-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "parity-scale-codec"
     ],
     "DependencyN": 0
   },
   "byteorder": {
+    "URL": "https://github.com/mesalock-linux/byteorder-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "jpeg-decoder",
-      "blobby",
-      "deflate",
-      "c2-chacha",
-      "image",
-      "twofish",
-      "threefish-cipher",
-      "rsa",
-      "num-bigint-dig",
       "etcommon-rlp",
-      "aes-soft",
-      "blowfish",
-      "snap",
-      "etcommon-bigint",
-      "chacha20",
-      "block-buffer",
-      "bincode",
+      "twofish",
       "parity-wasm",
+      "blobby",
+      "block-buffer",
+      "chacha20",
       "tiff",
-      "magma",
-      "salsa20",
       "des",
-      "cast5"
+      "image",
+      "bincode",
+      "etcommon-bigint",
+      "c2-chacha",
+      "deflate",
+      "jpeg-decoder",
+      "aes-soft",
+      "snap",
+      "num-bigint-dig",
+      "cast5",
+      "rsa",
+      "salsa20",
+      "magma",
+      "blowfish",
+      "threefish-cipher"
     ],
     "DependencyN": 0
   },
   "bytes": {
+    "URL": "https://github.com/mesalock-linux/bytes-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "protobuf",
+      "prost",
       "http",
-      "kvdb",
-      "prost"
+      "protobuf",
+      "kvdb"
     ],
     "DependencyN": 1
   },
   "c2-chacha": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/stream-ciphers/chacha/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "cast5": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/cast5/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "cfb-mode": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/cfb-mode/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "cfb8": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/cfb8/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "chacha20": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/chacha20/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "chrono": {
+    "URL": "https://github.com/mesalock-linux/chrono-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "jsonwebtoken",
-      "yasna"
+      "yasna",
+      "jsonwebtoken"
     ],
     "DependencyN": 4
   },
   "cmac": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-MACs-sgx/blob/master/cmac/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "color_quant": {
+    "URL": "https://github.com/mesalock-linux/color_quant-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "gif"
     ],
     "DependencyN": 0
   },
   "crc32fast": {
+    "URL": "https://github.com/mesalock-linux/rust-crc32fast-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "gzip-header",
+      "libflate",
       "png",
-      "libflate"
+      "gzip-header"
     ],
     "DependencyN": 0
   },
   "crypto-mac": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/crypto-mac/Cargo.toml",
     "Dependents": [
-      "hmac",
-      "blake2",
       "cmac",
-      "daa"
+      "hmac",
+      "daa",
+      "blake2"
     ],
     "DependencyN": 2
   },
   "ctr": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/ctr/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "daa": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-MACs-sgx/blob/master/daa/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "data-url": {
+    "URL": "https://github.com/mesalock-linux/rust-url-sgx/blob/master/data-url/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "deflate": {
+    "URL": "https://github.com/mesalock-linux/deflate-rs-sgx/blob/dev/Cargo.toml",
     "Dependents": [
       "png"
     ],
     "DependencyN": 3
   },
   "des": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/des/Cargo.toml",
     "Dependents": [
       "daa"
     ],
     "DependencyN": 2
   },
   "digest": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/digest/Cargo.toml",
     "Dependents": [
-      "libsecp256k1",
-      "blake-hash",
-      "hmac",
-      "gost94",
-      "blake2",
-      "md-5",
-      "groestl-aesni",
-      "groestl",
-      "skein-hash",
-      "jh-x86_64",
-      "md4",
       "whirlpool",
-      "ripemd160",
-      "sputnikvm",
-      "streebog",
-      "ripemd320",
+      "blake-hash",
+      "groestl-aesni",
       "sha2",
-      "sha3",
       "md2",
-      "sha-1"
+      "md4",
+      "jh-x86_64",
+      "libsecp256k1",
+      "ripemd320",
+      "gost94",
+      "ripemd160",
+      "groestl",
+      "sha-1",
+      "sputnikvm",
+      "skein-hash",
+      "hmac",
+      "md-5",
+      "streebog",
+      "sha3",
+      "blake2"
     ],
     "DependencyN": 1
   },
   "elastic-array": {
+    "URL": "https://github.com/mesalock-linux/elastic-array-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "kvdb",
-      "etcommon-rlp"
+      "etcommon-rlp",
+      "kvdb"
     ],
     "DependencyN": 1
   },
   "encoding_rs": {
+    "URL": "https://github.com/mesalock-linux/encoding_rs-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "env_logger": {
+    "URL": "https://github.com/mesalock-linux/env_logger-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "jsonpath_lib",
       "quickcheck"
@@ -309,41 +352,47 @@
     "DependencyN": 4
   },
   "erased-serde": {
+    "URL": "https://github.com/mesalock-linux/erased-serde-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "typetag"
     ],
     "DependencyN": 1
   },
   "etcommon-bigint": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/bigint/Cargo.toml",
     "Dependents": [
-      "etcommon-block-core",
-      "etcommon-block",
-      "sputnikvm",
+      "etcommon-bloom",
       "etcommon-trie",
-      "etcommon-bloom"
+      "etcommon-block-core",
+      "sputnikvm",
+      "etcommon-block"
     ],
     "DependencyN": 4
   },
   "etcommon-block": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/block/Cargo.toml",
     "Dependents": [
       "sputnikvm"
     ],
     "DependencyN": 7
   },
   "etcommon-block-core": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/block-core/Cargo.toml",
     "Dependents": [
-      "etcommon-block",
-      "sputnikvm"
+      "sputnikvm",
+      "etcommon-block"
     ],
     "DependencyN": 3
   },
   "etcommon-bloom": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/bloom/Cargo.toml",
     "Dependents": [
       "etcommon-block"
     ],
     "DependencyN": 3
   },
   "etcommon-hexutil": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/hexutil/Cargo.toml",
     "Dependents": [
       "etcommon-rlp",
       "etcommon-bigint"
@@ -351,218 +400,257 @@
     "DependencyN": 0
   },
   "etcommon-rlp": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/rlp/Cargo.toml",
     "Dependents": [
-      "etcommon-block-core",
-      "etcommon-block",
-      "sputnikvm",
+      "etcommon-bloom",
       "etcommon-trie",
       "etcommon-bigint",
-      "etcommon-bloom"
+      "etcommon-block-core",
+      "sputnikvm",
+      "etcommon-block"
     ],
     "DependencyN": 3
   },
   "etcommon-trie": {
+    "URL": "https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/trie/Cargo.toml",
     "Dependents": [
       "etcommon-block"
     ],
     "DependencyN": 3
   },
   "failure": {
+    "URL": "https://github.com/mesalock-linux/failure-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "fnv": {
+    "URL": "https://github.com/mesalock-linux/rust-fnv-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "http"
     ],
     "DependencyN": 0
   },
   "getrandom": {
+    "URL": "https://github.com/mesalock-linux/getrandom-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "gif": {
+    "URL": "https://github.com/mesalock-linux/image-gif-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "image"
     ],
     "DependencyN": 2
   },
   "gost94": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/gost94/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "groestl": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/groestl/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "groestl-aesni": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/hashes/groestl/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "gzip-header": {
+    "URL": "https://github.com/mesalock-linux/gzip-header-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "deflate"
     ],
     "DependencyN": 1
   },
   "heapsize": {
+    "URL": "https://github.com/mesalock-linux/heapsize-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "linked-hash-map",
+      "elastic-array",
       "etcommon-bigint",
-      "elastic-array"
+      "linked-hash-map"
     ],
     "DependencyN": 0
   },
   "hex": {
+    "URL": "https://github.com/mesalock-linux/rust-hex-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "hex-literal": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/hex-literal/Cargo.toml",
     "Dependents": [
       "jh-x86_64"
     ],
     "DependencyN": 0
   },
   "hmac": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-MACs-sgx/blob/master/hmac/Cargo.toml",
     "Dependents": [
       "hmac-drbg"
     ],
     "DependencyN": 2
   },
   "hmac-drbg": {
+    "URL": "https://github.com/mesalock-linux/hmac-drbg-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "libsecp256k1"
     ],
     "DependencyN": 1
   },
   "http": {
+    "URL": "https://github.com/mesalock-linux/http-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "http_req": {
+    "URL": "https://github.com/mesalock-linux/http_req-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "humantime": {
+    "URL": "https://github.com/mesalock-linux/humantime-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "env_logger"
     ],
     "DependencyN": 1
   },
   "idna": {
+    "URL": "https://github.com/mesalock-linux/rust-url-sgx/blob/master/idna/Cargo.toml",
     "Dependents": [
       "url"
     ],
     "DependencyN": 3
   },
   "image": {
+    "URL": "https://github.com/mesalock-linux/image-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 8
   },
   "indexmap": {
+    "URL": "https://github.com/mesalock-linux/indexmap-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "serde_json"
     ],
     "DependencyN": 1
   },
   "inflate": {
+    "URL": "https://github.com/mesalock-linux/inflate-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "png"
     ],
     "DependencyN": 1
   },
   "integer-encoding": {
+    "URL": "https://github.com/mesalock-linux/integer-encoding-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "rusty-leveldb"
     ],
     "DependencyN": 0
   },
   "inventory": {
+    "URL": "https://github.com/mesalock-linux/inventory-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "typetag"
     ],
     "DependencyN": 0
   },
   "iovec": {
+    "URL": "https://github.com/mesalock-linux/iovec-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "mio"
     ],
     "DependencyN": 0
   },
   "itertools": {
+    "URL": "https://github.com/mesalock-linux/rust-itertools-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "itoa": {
+    "URL": "https://github.com/mesalock-linux/itoa-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "http",
-      "serde_json"
+      "serde_json",
+      "http"
     ],
     "DependencyN": 0
   },
   "jh-x86_64": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/hashes/jh/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "jpeg-decoder": {
+    "URL": "https://github.com/mesalock-linux/jpeg-decoder-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "image"
     ],
     "DependencyN": 1
   },
   "jsonpath_lib": {
+    "URL": "https://github.com/mesalock-linux/jsonpath-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 5
   },
   "jsonwebtoken": {
+    "URL": "https://github.com/mesalock-linux/jsonwebtoken-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 6
   },
   "kuznyechik": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/kuznyechik/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "kvdb": {
+    "URL": "https://github.com/mesalock-linux/parity-common-sgx/blob/master/kvdb/Cargo.toml",
     "Dependents": [
       "kvdb-memorydb"
     ],
     "DependencyN": 2
   },
   "kvdb-memorydb": {
+    "URL": "https://github.com/mesalock-linux/parity-common-sgx/blob/master/kvdb-memorydb/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "libflate": {
+    "URL": "https://github.com/mesalock-linux/libflate-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "libsecp256k1": {
+    "URL": "https://github.com/mesalock-linux/libsecp256k1-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "etcommon-block",
-      "sputnikvm"
+      "sputnikvm",
+      "etcommon-block"
     ],
     "DependencyN": 5
   },
   "linked-hash-map": {
+    "URL": "https://github.com/mesalock-linux/linked-hash-map-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "toml"
     ],
     "DependencyN": 2
   },
   "log": {
+    "URL": "https://github.com/mesalock-linux/log-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "mio",
+      "env_logger",
+      "jsonpath_lib",
+      "quickcheck",
       "sputnikvm",
       "rustls",
-      "jsonpath_lib",
       "rand",
-      "getrandom",
-      "env_logger",
-      "quickcheck"
+      "mio",
+      "getrandom"
     ],
     "DependencyN": 1
   },
   "lzw": {
+    "URL": "https://github.com/mesalock-linux/lzw-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "gif",
       "tiff"
@@ -570,293 +658,342 @@
     "DependencyN": 0
   },
   "magma": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/magma/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "matches": {
+    "URL": "https://github.com/mesalock-linux/rust-std-candidates-sgx/blob/master/matches/Cargo.toml",
     "Dependents": [
-      "unicode-bidi",
-      "data-url",
+      "url",
       "idna",
-      "url"
+      "data-url",
+      "unicode-bidi"
     ],
     "DependencyN": 0
   },
   "matrixmultiply": {
+    "URL": "https://github.com/mesalock-linux/matrixmultiply-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "ndarray",
-      "rulinalg"
+      "rulinalg",
+      "ndarray"
     ],
     "DependencyN": 0
   },
   "md-5": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/md5/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "md2": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/md2/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "md4": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/md4/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "md5": {
+    "URL": "https://github.com/mesalock-linux/md5-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "uuid"
     ],
     "DependencyN": 0
   },
   "memchr": {
+    "URL": "https://github.com/mesalock-linux/rust-memchr-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "regex",
-      "aho-corasick"
+      "aho-corasick",
+      "regex"
     ],
     "DependencyN": 0
   },
   "miniz_oxide": {
+    "URL": "https://github.com/mesalock-linux/miniz_oxide-sgx/blob/master/miniz_oxide/Cargo.toml",
     "Dependents": [
       "tiff"
     ],
     "DependencyN": 1
   },
   "mio": {
+    "URL": "https://github.com/mesalock-linux/mio-sgx/blob/v0.6_sgx_1.1.1/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "ndarray": {
+    "URL": "https://github.com/mesalock-linux/ndarray-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 5
   },
   "net2": {
+    "URL": "https://github.com/mesalock-linux/net2-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "mio"
     ],
     "DependencyN": 0
   },
   "num": {
+    "URL": "https://github.com/mesalock-linux/num-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "rusty-machine",
       "rulinalg",
-      "rust-base58"
+      "rust-base58",
+      "rusty-machine"
     ],
     "DependencyN": 5
   },
   "num-bigint-dig": {
+    "URL": "https://github.com/mesalock-linux/num-bigint-sgx/blob/dig/Cargo.toml",
     "Dependents": null,
     "DependencyN": 7
   },
   "num-complex": {
+    "URL": "https://github.com/mesalock-linux/num-complex-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "num",
-      "ndarray"
+      "ndarray",
+      "num"
     ],
     "DependencyN": 3
   },
   "num-integer": {
+    "URL": "https://github.com/mesalock-linux/num-integer-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "num",
+      "num-rational",
       "chrono",
-      "rsa",
-      "num-bigint-dig",
-      "num-iter",
       "ndarray",
-      "num-rational"
+      "num-bigint-dig",
+      "rsa",
+      "num-iter",
+      "num"
     ],
     "DependencyN": 1
   },
   "num-iter": {
+    "URL": "https://github.com/mesalock-linux/num-iter-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "image",
-      "num",
+      "num-bigint-dig",
       "rsa",
-      "num-bigint-dig"
+      "num"
     ],
     "DependencyN": 2
   },
   "num-rational": {
+    "URL": "https://github.com/mesalock-linux/num-rational-sgx/blob/master/Cargo.toml",
     "Dependents": [
+      "wasmi",
       "image",
-      "num",
-      "wasmi"
+      "num"
     ],
     "DependencyN": 3
   },
   "num-traits": {
+    "URL": "https://github.com/mesalock-linux/num-traits-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "image",
-      "num",
+      "num-rational",
       "chrono",
-      "rsa",
-      "num-bigint-dig",
       "wasmi",
-      "num-iter",
+      "image",
       "ndarray",
       "num-complex",
-      "num-rational",
-      "num-integer"
+      "num-bigint-dig",
+      "num-integer",
+      "rsa",
+      "num-iter",
+      "num"
     ],
     "DependencyN": 0
   },
   "ofb": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/ofb/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "parity-scale-codec": {
+    "URL": "https://github.com/mesalock-linux/parity-scale-codec-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "parity-scale-codec-derive": {
+    "URL": "https://github.com/mesalock-linux/parity-scale-codec-sgx/blob/master/derive/Cargo.toml",
     "Dependents": [
       "parity-scale-codec"
     ],
     "DependencyN": 0
   },
   "parity-wasm": {
+    "URL": "https://github.com/mesalock-linux/parity-wasm-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "wasmi"
     ],
     "DependencyN": 1
   },
   "percent-encoding": {
+    "URL": "https://github.com/mesalock-linux/rust-url-sgx/blob/master/percent_encoding/Cargo.toml",
     "Dependents": [
       "url"
     ],
     "DependencyN": 0
   },
   "png": {
+    "URL": "https://github.com/mesalock-linux/image-png-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "image"
     ],
     "DependencyN": 3
   },
   "ppv-lite86": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/utils-simd/ppv-lite86/Cargo.toml",
     "Dependents": [
       "c2-chacha"
     ],
     "DependencyN": 0
   },
   "prost": {
+    "URL": "https://github.com/mesalock-linux/prost-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "protected_fs_rs": {
+    "URL": "https://github.com/mesalock-linux/protected_fs_rs/blob/master/Cargo.toml",
     "Dependents": [
       "rusty-leveldb"
     ],
     "DependencyN": 1
   },
   "protobuf": {
+    "URL": "https://github.com/mesalock-linux/rust-protobuf-sgx/blob/v2.8/protobuf/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "quick-error": {
+    "URL": "https://github.com/mesalock-linux/quick-error-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "humantime"
     ],
     "DependencyN": 0
   },
   "quickcheck": {
+    "URL": "https://github.com/mesalock-linux/quickcheck-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "rand": {
+    "URL": "https://github.com/mesalock-linux/rand-sgx/blob/v0.6.5_sgx1.1.1/Cargo.toml",
     "Dependents": [
-      "libsecp256k1",
       "uuid",
-      "rusty-leveldb",
-      "rsa",
-      "num-bigint-dig",
+      "libsecp256k1",
+      "quickcheck",
       "num-complex",
-      "quickcheck"
+      "rusty-leveldb",
+      "num-bigint-dig",
+      "rsa"
     ],
     "DependencyN": 1
   },
   "rc2": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/rc2/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "rdrand": {
+    "URL": "https://github.com/mesalock-linux/rust_rdrand-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "protected_fs_rs"
     ],
     "DependencyN": 0
   },
   "regex": {
+    "URL": "https://github.com/mesalock-linux/regex-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "env_logger"
     ],
     "DependencyN": 3
   },
   "ring": {
+    "URL": "https://github.com/mesalock-linux/ring-sgx/blob/v0.16.5/Cargo.toml",
     "Dependents": [
-      "jsonwebtoken",
-      "rustls",
       "sct",
-      "webpki"
+      "webpki",
+      "rustls",
+      "jsonwebtoken"
     ],
     "DependencyN": 0
   },
   "ripemd160": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/ripemd160/Cargo.toml",
     "Dependents": [
       "sputnikvm"
     ],
     "DependencyN": 2
   },
   "ripemd320": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/ripemd320/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "rle-decode-fast": {
+    "URL": "https://github.com/mesalock-linux/rle-decode-helper-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "libflate"
     ],
     "DependencyN": 0
   },
   "rsa": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-RSA-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 7
   },
   "rulinalg": {
+    "URL": "https://github.com/mesalock-linux/rulinalg-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "rusty-machine"
     ],
     "DependencyN": 4
   },
   "rust-base58": {
+    "URL": "https://github.com/mesalock-linux/rust-base58-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "rust-crypto": {
+    "URL": "https://github.com/mesalock-linux/rust-crypto-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "rustc-serialize": {
+    "URL": "https://github.com/mesalock-linux/rustc-serialize-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "chrono",
-      "rust-crypto"
+      "rust-crypto",
+      "chrono"
     ],
     "DependencyN": 0
   },
   "rustls": {
+    "URL": "https://github.com/mesalock-linux/rustls/blob/mesalock_sgx/Cargo.toml",
     "Dependents": [
       "http_req"
     ],
     "DependencyN": 5
   },
   "rusty-leveldb": {
+    "URL": "https://github.com/mesalock-linux/rusty_leveldb_sgx/blob/sgx/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "rusty-machine": {
+    "URL": "https://github.com/mesalock-linux/rusty-machine-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "salsa20": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/salsa20/Cargo.toml",
     "Dependents": null,
     "DependencyN": 3
   },
   "salsa20-core": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-stream-ciphers-sgx/blob/master/salsa20-core/Cargo.toml",
     "Dependents": [
       "chacha20",
       "salsa20"
@@ -864,91 +1001,101 @@
     "DependencyN": 1
   },
   "sct": {
+    "URL": "https://github.com/mesalock-linux/sct.rs/blob/mesalock_sgx/Cargo.toml",
     "Dependents": [
       "rustls"
     ],
     "DependencyN": 1
   },
   "serde": {
+    "URL": "https://github.com/mesalock-linux/serde-sgx/blob/master/serde/Cargo.toml",
     "Dependents": [
-      "log",
-      "parity-scale-codec",
+      "serde_json",
+      "uuid",
       "serde_bytes",
       "indexmap",
-      "smallvec",
-      "uuid",
-      "protobuf",
-      "rusty-machine",
-      "serde_cbor",
-      "bytes",
-      "jsonwebtoken",
-      "bitvec",
-      "erased-serde",
-      "unicode-bidi",
-      "serde_json",
+      "num-rational",
+      "toml",
       "chrono",
-      "wabt",
-      "sha1",
-      "rsa",
-      "num-bigint-dig",
-      "encoding_rs",
-      "wasmi",
-      "typetag",
-      "ndarray",
+      "bitvec",
       "rulinalg",
+      "jsonpath_lib",
+      "url",
+      "sha1",
+      "bytes",
+      "wasmi",
+      "unicode-bidi",
+      "encoding_rs",
+      "log",
+      "bincode",
+      "wabt",
+      "serde-big-array",
+      "ndarray",
       "linked-hash-map",
       "num-complex",
-      "num-rational",
-      "jsonpath_lib",
-      "bincode",
-      "toml",
-      "serde-big-array",
-      "url"
+      "parity-scale-codec",
+      "rusty-machine",
+      "serde_cbor",
+      "jsonwebtoken",
+      "erased-serde",
+      "num-bigint-dig",
+      "rsa",
+      "protobuf",
+      "typetag",
+      "smallvec"
     ],
     "DependencyN": 1
   },
   "serde-big-array": {
+    "URL": "https://github.com/mesalock-linux/serde-big-array-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "serde_bytes": {
+    "URL": "https://github.com/mesalock-linux/serde-bytes-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "serde_cbor": {
+    "URL": "https://github.com/mesalock-linux/cbor-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "serde_derive": {
+    "URL": "https://github.com/mesalock-linux/serde-sgx/blob/master/serde_derive/Cargo.toml",
     "Dependents": [
-      "protobuf",
-      "rusty-machine",
-      "serde",
-      "jsonwebtoken",
-      "wabt",
       "rulinalg",
-      "serde-big-array"
+      "wabt",
+      "serde-big-array",
+      "rusty-machine",
+      "jsonwebtoken",
+      "protobuf",
+      "serde"
     ],
     "DependencyN": 0
   },
   "serde_json": {
+    "URL": "https://github.com/mesalock-linux/serde-json-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "jsonwebtoken",
-      "jsonpath_lib"
+      "jsonpath_lib",
+      "jsonwebtoken"
     ],
     "DependencyN": 3
   },
   "sha-1": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/sha1/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "sha1": {
+    "URL": "https://github.com/mesalock-linux/rust-sha1-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "uuid"
     ],
     "DependencyN": 1
   },
   "sha2": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/sha2/Cargo.toml",
     "Dependents": [
       "libsecp256k1",
       "sputnikvm"
@@ -956,26 +1103,30 @@
     "DependencyN": 2
   },
   "sha3": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/sha3/Cargo.toml",
     "Dependents": [
-      "etcommon-block-core",
-      "etcommon-block",
-      "sputnikvm",
+      "etcommon-bloom",
       "etcommon-trie",
-      "etcommon-bloom"
+      "etcommon-block-core",
+      "sputnikvm",
+      "etcommon-block"
     ],
     "DependencyN": 2
   },
   "skein-hash": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/hashes/skein/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "slab": {
+    "URL": "https://github.com/mesalock-linux/slab-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "mio"
     ],
     "DependencyN": 0
   },
   "smallvec": {
+    "URL": "https://github.com/mesalock-linux/rust-smallvec-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "unicode-normalization",
       "num-bigint-dig"
@@ -983,168 +1134,199 @@
     "DependencyN": 1
   },
   "snap": {
+    "URL": "https://github.com/mesalock-linux/rust-snappy-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "rusty-leveldb"
     ],
     "DependencyN": 1
   },
   "sputnikvm": {
+    "URL": "https://github.com/mesalock-linux/sputnikvm-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 10
   },
   "stream-cipher": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/stream-cipher/Cargo.toml",
     "Dependents": [
-      "c2-chacha",
-      "cfb-mode",
-      "aes-ctr",
-      "ofb",
-      "cfb8",
       "ctr",
+      "aes-ctr",
       "chacha20",
+      "salsa20-core",
+      "ofb",
       "aesni",
+      "cfb-mode",
+      "c2-chacha",
       "salsa20",
-      "salsa20-core"
+      "cfb8"
     ],
     "DependencyN": 1
   },
   "streebog": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/streebog/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "subtle": {
+    "URL": "https://github.com/mesalock-linux/subtle-sgx/blob/master/Cargo.toml",
     "Dependents": [
-      "libsecp256k1",
       "crypto-mac",
-      "rsa",
-      "universal-hash"
+      "universal-hash",
+      "libsecp256k1",
+      "rsa"
     ],
     "DependencyN": 0
   },
   "take_mut": {
+    "URL": "https://github.com/mesalock-linux/take_mut-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "libflate"
     ],
     "DependencyN": 0
   },
   "termcolor": {
+    "URL": "https://github.com/mesalock-linux/termcolor-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "env_logger"
     ],
     "DependencyN": 0
   },
   "thiserror": {
+    "URL": "https://github.com/mesalock-linux/thiserror-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "thread-id": {
+    "URL": "https://github.com/mesalock-linux/thread-id-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "thread_local": {
+    "URL": "https://github.com/mesalock-linux/thread_local-rs-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "regex"
     ],
     "DependencyN": 0
   },
   "threadpool": {
+    "URL": "https://github.com/mesalock-linux/rust-threadpool-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "threefish-cipher": {
+    "URL": "https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/block-ciphers/threefish/Cargo.toml",
     "Dependents": [
       "skein-hash"
     ],
     "DependencyN": 2
   },
   "threshold-secret-sharing": {
+    "URL": "https://github.com/mesalock-linux/rust-threshold-secret-sharing-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "tiff": {
+    "URL": "https://github.com/mesalock-linux/image-tiff-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "image"
     ],
     "DependencyN": 3
   },
   "toml": {
+    "URL": "https://github.com/mesalock-linux/toml-rs-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "twofish": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-block-ciphers-sgx/blob/master/twofish/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "typetag": {
+    "URL": "https://github.com/mesalock-linux/typetag-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "wasmi"
     ],
     "DependencyN": 3
   },
   "ucd-util": {
+    "URL": "https://github.com/mesalock-linux/ucd-generate-sgx/blob/master/ucd-util/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "unicase": {
+    "URL": "https://github.com/mesalock-linux/unicase-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "http_req"
     ],
     "DependencyN": 0
   },
   "unicode-bidi": {
+    "URL": "https://github.com/mesalock-linux/unicode-bidi-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "idna"
     ],
     "DependencyN": 2
   },
   "unicode-normalization": {
+    "URL": "https://github.com/mesalock-linux/unicode-normalization-sgx/blob/master/Cargo.toml",
     "Dependents": [
       "idna"
     ],
     "DependencyN": 1
   },
   "universal-hash": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-traits-sgx/blob/master/universal-hash/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   },
   "url": {
+    "URL": "https://github.com/mesalock-linux/rust-url-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "utf8-ranges": {
+    "URL": "https://github.com/mesalock-linux/utf8-ranges-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 0
   },
   "uuid": {
+    "URL": "https://github.com/mesalock-linux/uuid-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 4
   },
   "wabt": {
+    "URL": "https://github.com/mesalock-linux/wabt-rs-sgx/blob/v0.9-core/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "wasmi": {
+    "URL": "https://github.com/mesalock-linux/wasmi-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 5
   },
   "webpki": {
+    "URL": "https://github.com/mesalock-linux/webpki/blob/mesalock_sgx/Cargo.toml",
     "Dependents": [
-      "rustls",
       "webpki-roots",
+      "rustls",
       "http_req"
     ],
     "DependencyN": 1
   },
   "webpki-roots": {
+    "URL": "https://github.com/mesalock-linux/webpki-roots/blob/mesalock_sgx/Cargo.toml",
     "Dependents": [
       "http_req"
     ],
     "DependencyN": 1
   },
   "whirlpool": {
+    "URL": "https://github.com/mesalock-linux/rustcrypto-hashes-sgx/blob/master/whirlpool/Cargo.toml",
     "Dependents": null,
     "DependencyN": 2
   },
   "yasna": {
+    "URL": "https://github.com/mesalock-linux/yasna.rs-sgx/blob/master/Cargo.toml",
     "Dependents": null,
     "DependencyN": 1
   }
