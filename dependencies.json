@@ -1,9 +1,10 @@
 {
   "adler32": {
     "Dependents": [
-      "inflate",
+      "miniz_oxide",
+      "deflate",
       "libflate",
-      "deflate"
+      "inflate"
     ],
     "DependencyN": 0
   },
@@ -25,8 +26,8 @@
   },
   "aesni": {
     "Dependents": [
-      "aes",
-      "aes-ctr"
+      "aes-ctr",
+      "aes"
     ],
     "DependencyN": 2
   },
@@ -63,7 +64,6 @@
   },
   "bitvec": {
     "Dependents": [
-      "parity-scale-codec-derive",
       "parity-scale-codec"
     ],
     "DependencyN": 1
@@ -78,53 +78,53 @@
   },
   "blobby": {
     "Dependents": [
-      "digest",
       "crypto-mac",
-      "stream-cipher",
-      "block-cipher-trait"
+      "block-cipher-trait",
+      "digest",
+      "stream-cipher"
     ],
     "DependencyN": 1
   },
   "block-buffer": {
     "Dependents": [
-      "sha-1",
-      "md4",
+      "blake-hash",
+      "gost94",
+      "md-5",
+      "groestl-aesni",
       "groestl",
       "skein-hash",
-      "md2",
-      "whirlpool",
-      "md-5",
-      "ripemd320",
-      "groestl-aesni",
-      "blake-hash",
-      "ripemd160",
-      "sha2",
       "jh-x86_64",
-      "gost94",
+      "md4",
+      "whirlpool",
+      "ripemd160",
+      "streebog",
+      "ripemd320",
+      "sha2",
       "sha3",
-      "streebog"
+      "md2",
+      "sha-1"
     ],
     "DependencyN": 2
   },
   "block-cipher-trait": {
     "Dependents": [
-      "ctr",
-      "cfb8",
-      "ofb",
       "cfb-mode",
       "block-modes",
-      "rc2",
-      "cmac",
-      "aes-soft",
-      "aes",
-      "cast5",
-      "aesni",
       "twofish",
-      "blowfish",
-      "magma",
       "kuznyechik",
       "threefish-cipher",
-      "des"
+      "aes-soft",
+      "ofb",
+      "blowfish",
+      "cfb8",
+      "rc2",
+      "ctr",
+      "aesni",
+      "cmac",
+      "magma",
+      "aes",
+      "des",
+      "cast5"
     ],
     "DependencyN": 1
   },
@@ -134,9 +134,9 @@
   },
   "block-padding": {
     "Dependents": [
+      "block-modes",
       "skein-hash",
-      "block-buffer",
-      "block-modes"
+      "block-buffer"
     ],
     "DependencyN": 0
   },
@@ -146,46 +146,44 @@
   },
   "byte-slice-cast": {
     "Dependents": [
-      "parity-scale-codec-derive",
       "parity-scale-codec"
     ],
     "DependencyN": 0
   },
   "byteorder": {
     "Dependents": [
+      "jpeg-decoder",
+      "blobby",
+      "deflate",
+      "c2-chacha",
+      "image",
+      "twofish",
+      "threefish-cipher",
       "rsa",
       "num-bigint-dig",
-      "c2-chacha",
-      "block-buffer",
-      "etcommon-bigint",
-      "image",
-      "bincode",
-      "snap",
-      "salsa20",
-      "aes-soft",
-      "jpeg-decoder",
-      "ucd-util",
-      "chacha20",
-      "cast5",
-      "parity-wasm",
-      "twofish",
-      "blowfish",
-      "magma",
       "etcommon-rlp",
-      "threefish-cipher",
+      "aes-soft",
+      "blowfish",
+      "snap",
+      "etcommon-bigint",
+      "chacha20",
+      "block-buffer",
+      "bincode",
+      "parity-wasm",
       "tiff",
+      "magma",
+      "salsa20",
       "des",
-      "deflate",
-      "blobby"
+      "cast5"
     ],
     "DependencyN": 0
   },
   "bytes": {
     "Dependents": [
-      "kvdb",
       "protobuf",
-      "prost",
-      "http"
+      "http",
+      "kvdb",
+      "prost"
     ],
     "DependencyN": 1
   },
@@ -229,7 +227,6 @@
   "crc32fast": {
     "Dependents": [
       "gzip-header",
-      "miniz_oxide",
       "png",
       "libflate"
     ],
@@ -254,7 +251,7 @@
   },
   "data-url": {
     "Dependents": null,
-    "DependencyN": 4
+    "DependencyN": 1
   },
   "deflate": {
     "Dependents": [
@@ -270,26 +267,26 @@
   },
   "digest": {
     "Dependents": [
-      "sha-1",
-      "sputnikvm",
-      "md4",
-      "groestl",
       "libsecp256k1",
+      "blake-hash",
       "hmac",
-      "skein-hash",
-      "md2",
-      "whirlpool",
+      "gost94",
       "blake2",
       "md-5",
-      "ripemd320",
       "groestl-aesni",
-      "blake-hash",
-      "ripemd160",
-      "sha2",
+      "groestl",
+      "skein-hash",
       "jh-x86_64",
-      "gost94",
+      "md4",
+      "whirlpool",
+      "ripemd160",
+      "sputnikvm",
+      "streebog",
+      "ripemd320",
+      "sha2",
       "sha3",
-      "streebog"
+      "md2",
+      "sha-1"
     ],
     "DependencyN": 1
   },
@@ -319,11 +316,11 @@
   },
   "etcommon-bigint": {
     "Dependents": [
-      "sputnikvm",
-      "etcommon-bloom",
       "etcommon-block-core",
       "etcommon-block",
-      "etcommon-trie"
+      "sputnikvm",
+      "etcommon-trie",
+      "etcommon-bloom"
     ],
     "DependencyN": 4
   },
@@ -335,8 +332,8 @@
   },
   "etcommon-block-core": {
     "Dependents": [
-      "sputnikvm",
-      "etcommon-block"
+      "etcommon-block",
+      "sputnikvm"
     ],
     "DependencyN": 3
   },
@@ -348,19 +345,19 @@
   },
   "etcommon-hexutil": {
     "Dependents": [
-      "etcommon-bigint",
-      "etcommon-rlp"
+      "etcommon-rlp",
+      "etcommon-bigint"
     ],
     "DependencyN": 0
   },
   "etcommon-rlp": {
     "Dependents": [
-      "sputnikvm",
-      "etcommon-bloom",
       "etcommon-block-core",
-      "etcommon-bigint",
       "etcommon-block",
-      "etcommon-trie"
+      "sputnikvm",
+      "etcommon-trie",
+      "etcommon-bigint",
+      "etcommon-bloom"
     ],
     "DependencyN": 3
   },
@@ -454,9 +451,6 @@
   },
   "idna": {
     "Dependents": [
-      "percent-encoding",
-      "idna",
-      "data-url",
       "url"
     ],
     "DependencyN": 3
@@ -501,8 +495,8 @@
   },
   "itoa": {
     "Dependents": [
-      "serde_json",
-      "http"
+      "http",
+      "serde_json"
     ],
     "DependencyN": 0
   },
@@ -544,8 +538,8 @@
   },
   "libsecp256k1": {
     "Dependents": [
-      "sputnikvm",
-      "etcommon-block"
+      "etcommon-block",
+      "sputnikvm"
     ],
     "DependencyN": 5
   },
@@ -557,14 +551,14 @@
   },
   "log": {
     "Dependents": [
-      "sputnikvm",
       "mio",
-      "jsonpath_lib",
-      "quickcheck",
-      "getrandom",
+      "sputnikvm",
       "rustls",
+      "jsonpath_lib",
+      "rand",
+      "getrandom",
       "env_logger",
-      "rand"
+      "quickcheck"
     ],
     "DependencyN": 1
   },
@@ -581,18 +575,17 @@
   },
   "matches": {
     "Dependents": [
-      "percent-encoding",
       "unicode-bidi",
-      "idna",
       "data-url",
+      "idna",
       "url"
     ],
     "DependencyN": 0
   },
   "matrixmultiply": {
     "Dependents": [
-      "rulinalg",
-      "ndarray"
+      "ndarray",
+      "rulinalg"
     ],
     "DependencyN": 0
   },
@@ -623,7 +616,6 @@
   },
   "miniz_oxide": {
     "Dependents": [
-      "miniz_oxide",
       "tiff"
     ],
     "DependencyN": 1
@@ -644,9 +636,9 @@
   },
   "num": {
     "Dependents": [
-      "rust-base58",
       "rusty-machine",
-      "rulinalg"
+      "rulinalg",
+      "rust-base58"
     ],
     "DependencyN": 5
   },
@@ -663,46 +655,46 @@
   },
   "num-integer": {
     "Dependents": [
-      "num-rational",
+      "num",
+      "chrono",
       "rsa",
       "num-bigint-dig",
-      "num",
       "num-iter",
-      "chrono",
-      "ndarray"
+      "ndarray",
+      "num-rational"
     ],
     "DependencyN": 1
   },
   "num-iter": {
     "Dependents": [
-      "rsa",
-      "num-bigint-dig",
       "image",
-      "num"
+      "num",
+      "rsa",
+      "num-bigint-dig"
     ],
     "DependencyN": 2
   },
   "num-rational": {
     "Dependents": [
-      "wasmi",
       "image",
-      "num"
+      "num",
+      "wasmi"
     ],
     "DependencyN": 3
   },
   "num-traits": {
     "Dependents": [
-      "num-rational",
-      "rsa",
-      "num-bigint-dig",
-      "num-complex",
-      "wasmi",
       "image",
       "num",
-      "num-iter",
-      "num-integer",
       "chrono",
-      "ndarray"
+      "rsa",
+      "num-bigint-dig",
+      "wasmi",
+      "num-iter",
+      "ndarray",
+      "num-complex",
+      "num-rational",
+      "num-integer"
     ],
     "DependencyN": 0
   },
@@ -716,10 +708,9 @@
   },
   "parity-scale-codec-derive": {
     "Dependents": [
-      "parity-scale-codec-derive",
       "parity-scale-codec"
     ],
-    "DependencyN": 3
+    "DependencyN": 0
   },
   "parity-wasm": {
     "Dependents": [
@@ -729,12 +720,9 @@
   },
   "percent-encoding": {
     "Dependents": [
-      "percent-encoding",
-      "idna",
-      "data-url",
       "url"
     ],
-    "DependencyN": 3
+    "DependencyN": 0
   },
   "png": {
     "Dependents": [
@@ -774,13 +762,13 @@
   },
   "rand": {
     "Dependents": [
-      "rsa",
       "libsecp256k1",
+      "uuid",
+      "rusty-leveldb",
+      "rsa",
       "num-bigint-dig",
       "num-complex",
-      "quickcheck",
-      "rusty-leveldb",
-      "uuid"
+      "quickcheck"
     ],
     "DependencyN": 1
   },
@@ -803,8 +791,8 @@
   "ring": {
     "Dependents": [
       "jsonwebtoken",
-      "sct",
       "rustls",
+      "sct",
       "webpki"
     ],
     "DependencyN": 0
@@ -845,8 +833,8 @@
   },
   "rustc-serialize": {
     "Dependents": [
-      "rust-crypto",
-      "chrono"
+      "chrono",
+      "rust-crypto"
     ],
     "DependencyN": 0
   },
@@ -870,8 +858,8 @@
   },
   "salsa20-core": {
     "Dependents": [
-      "salsa20",
-      "chacha20"
+      "chacha20",
+      "salsa20"
     ],
     "DependencyN": 1
   },
@@ -883,43 +871,39 @@
   },
   "serde": {
     "Dependents": [
-      "num-rational",
-      "encoding_rs",
-      "rsa",
-      "percent-encoding",
-      "typetag",
-      "bytes",
-      "linked-hash-map",
-      "num-bigint-dig",
-      "num-complex",
-      "unicode-bidi",
       "log",
-      "serde_cbor",
-      "rusty-machine",
-      "jsonpath_lib",
-      "erased-serde",
-      "wabt",
-      "parity-scale-codec-derive",
-      "wasmi",
-      "jsonwebtoken",
-      "serde_bytes",
       "parity-scale-codec",
-      "uuid",
-      "bincode",
-      "protobuf",
-      "serde_json",
-      "bitvec",
-      "smallvec",
-      "idna",
-      "rulinalg",
-      "serde-big-array",
-      "data-url",
+      "serde_bytes",
       "indexmap",
-      "url",
-      "sha1",
-      "toml",
+      "smallvec",
+      "uuid",
+      "protobuf",
+      "rusty-machine",
+      "serde_cbor",
+      "bytes",
+      "jsonwebtoken",
+      "bitvec",
+      "erased-serde",
+      "unicode-bidi",
+      "serde_json",
       "chrono",
-      "ndarray"
+      "wabt",
+      "sha1",
+      "rsa",
+      "num-bigint-dig",
+      "encoding_rs",
+      "wasmi",
+      "typetag",
+      "ndarray",
+      "rulinalg",
+      "linked-hash-map",
+      "num-complex",
+      "num-rational",
+      "jsonpath_lib",
+      "bincode",
+      "toml",
+      "serde-big-array",
+      "url"
     ],
     "DependencyN": 1
   },
@@ -937,20 +921,20 @@
   },
   "serde_derive": {
     "Dependents": [
-      "rusty-machine",
-      "wabt",
-      "jsonwebtoken",
       "protobuf",
+      "rusty-machine",
+      "serde",
+      "jsonwebtoken",
+      "wabt",
       "rulinalg",
-      "serde-big-array",
-      "serde"
+      "serde-big-array"
     ],
     "DependencyN": 0
   },
   "serde_json": {
     "Dependents": [
-      "jsonpath_lib",
-      "jsonwebtoken"
+      "jsonwebtoken",
+      "jsonpath_lib"
     ],
     "DependencyN": 3
   },
@@ -966,18 +950,18 @@
   },
   "sha2": {
     "Dependents": [
-      "sputnikvm",
-      "libsecp256k1"
+      "libsecp256k1",
+      "sputnikvm"
     ],
     "DependencyN": 2
   },
   "sha3": {
     "Dependents": [
-      "sputnikvm",
-      "etcommon-bloom",
       "etcommon-block-core",
       "etcommon-block",
-      "etcommon-trie"
+      "sputnikvm",
+      "etcommon-trie",
+      "etcommon-bloom"
     ],
     "DependencyN": 2
   },
@@ -1010,16 +994,16 @@
   },
   "stream-cipher": {
     "Dependents": [
-      "ctr",
-      "cfb8",
       "c2-chacha",
-      "ofb",
       "cfb-mode",
-      "salsa20",
-      "salsa20-core",
+      "aes-ctr",
+      "ofb",
+      "cfb8",
+      "ctr",
       "chacha20",
       "aesni",
-      "aes-ctr"
+      "salsa20",
+      "salsa20-core"
     ],
     "DependencyN": 1
   },
@@ -1029,9 +1013,9 @@
   },
   "subtle": {
     "Dependents": [
-      "rsa",
       "libsecp256k1",
       "crypto-mac",
+      "rsa",
       "universal-hash"
     ],
     "DependencyN": 0
@@ -1097,10 +1081,8 @@
     "DependencyN": 3
   },
   "ucd-util": {
-    "Dependents": [
-      "ucd-util"
-    ],
-    "DependencyN": 1
+    "Dependents": null,
+    "DependencyN": 0
   },
   "unicase": {
     "Dependents": [
@@ -1109,11 +1091,15 @@
     "DependencyN": 0
   },
   "unicode-bidi": {
-    "Dependents": null,
+    "Dependents": [
+      "idna"
+    ],
     "DependencyN": 2
   },
   "unicode-normalization": {
-    "Dependents": null,
+    "Dependents": [
+      "idna"
+    ],
     "DependencyN": 1
   },
   "universal-hash": {
@@ -1142,8 +1128,8 @@
   },
   "webpki": {
     "Dependents": [
-      "webpki-roots",
       "rustls",
+      "webpki-roots",
       "http_req"
     ],
     "DependencyN": 1

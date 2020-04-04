@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -14,24 +13,24 @@ import (
 )
 
 var sepecials = map[string]string{
-	"etcommon-rlp":        "rlp",
-	"etcommon-block":      "block",
-	"etcommon-hexutil":    "hexutil",
-	"etcommon-trie":       "trie",
-	"etcommon-block-core": "block-core",
-	"etcommon-bloom":      "bloom",
-	"etcommon-bigint":     "bigint",
-	"aes":                 "aes/aes",
-	"aesni":               "aes/aesni",
-	"aes-soft":            "aes/aes-soft",
-	"jh-x86_64":           "hashes/jh",
-	"skein-hash":          "hashes/skein",
-	"groestl-aesni":       "hashes/groestl",
-	"threefish-cipher":    "block-ciphers/threefish",
-	"c2-chacha":           "stream-ciphers/chacha",
-	"blake-hash":          "hashes/blake",
-	"ppv-lite86":          "utils-simd/ppv-lite86",
-	//"percent-encoding":"percent-encoding",
+	"etcommon-rlp":              "rlp",
+	"etcommon-block":            "block",
+	"etcommon-hexutil":          "hexutil",
+	"etcommon-trie":             "trie",
+	"etcommon-block-core":       "block-core",
+	"etcommon-bloom":            "bloom",
+	"etcommon-bigint":           "bigint",
+	"aes":                       "aes/aes",
+	"aesni":                     "aes/aesni",
+	"aes-soft":                  "aes/aes-soft",
+	"jh-x86_64":                 "hashes/jh",
+	"skein-hash":                "hashes/skein",
+	"groestl-aesni":             "hashes/groestl",
+	"threefish-cipher":          "block-ciphers/threefish",
+	"c2-chacha":                 "stream-ciphers/chacha",
+	"blake-hash":                "hashes/blake",
+	"ppv-lite86":                "utils-simd/ppv-lite86",
+	"parity-scale-codec-derive": "derive",
 }
 
 type DependencyManifest struct {
@@ -56,7 +55,7 @@ func newTOML(reader io.Reader) (*viper.Viper, error) {
 	return v, nil
 }
 
-func readDependencies(url string) ([]string, error) {
+func readDependencies(crate, url string) ([]string, error) {
 	response, err := http.Get(url)
 	if err != nil {
 		panic(err)
@@ -68,8 +67,9 @@ func readDependencies(url string) ([]string, error) {
 		return nil, err
 	}
 
-	if toml.IsSet("workspace") && !toml.IsSet("dependencies") {
-		return nil, errors.New("workspace isn't crate")
+	pkgName := toml.GetString("package.name")
+	if pkgName != crate {
+		return nil, fmt.Errorf("not the right pkg('%s') for crate(%s)", pkgName, crate)
 	}
 
 	uniques := make(map[string]struct{})
@@ -122,7 +122,7 @@ func main() {
 	depsGraph := make(map[string]TinyDependency)
 
 	updateDepsGraph := func(crate, tomlURL string) error {
-		deps, err := readDependencies(tomlURL)
+		deps, err := readDependencies(crate, tomlURL)
 		if err != nil {
 			return err
 		}
@@ -155,6 +155,8 @@ func main() {
 
 	fmt.Println("#(deps) =", len(dependencies))
 
+	cared := "parity-scale-codec-derive"
+
 	var failed []string
 	for k, v := range dependencies {
 		url := strings.ReplaceAll(v.Git, github, rawcontent)
@@ -172,8 +174,12 @@ func main() {
 			depsGraph[k] = TinyDependency{}
 		}
 
-		if err := updateDepsGraph(k, url+"/"+revision+"/Cargo.toml"); err == nil {
-			continue
+		if _, ok := sepecials[k]; !ok {
+			if err := updateDepsGraph(k, url+"/"+revision+"/Cargo.toml"); err == nil {
+				continue
+			} else if k == cared {
+				fmt.Println("err0:", err, url+"/"+revision+"/"+"/Cargo.toml")
+			}
 		}
 
 		kk, ok := sepecials[k]
@@ -182,11 +188,22 @@ func main() {
 		}
 		if err := updateDepsGraph(k, url+"/"+revision+"/"+kk+"/Cargo.toml"); err == nil {
 			continue
+		} else if k == cared {
+			fmt.Println("err1:", err, url+"/"+revision+"/"+kk+"/Cargo.toml")
 		}
 
 		crateName := strings.ReplaceAll(k, "-", "")
 		if err := updateDepsGraph(k, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
 			continue
+		} else if k == cared {
+			fmt.Println("err2:", err, url+"/"+revision+"/"+crateName+"/Cargo.toml")
+		}
+
+		crateName = strings.ReplaceAll(k, "-", "_")
+		if err := updateDepsGraph(k, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err == nil {
+			continue
+		} else if k == cared {
+			fmt.Println("err3:", err, url+"/"+revision+"/"+crateName+"/Cargo.toml")
 		}
 
 		failed = append(failed, k)
