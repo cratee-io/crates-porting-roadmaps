@@ -1,0 +1,1165 @@
+{
+  "adler32": {
+    "Dependents": [
+      "inflate",
+      "libflate",
+      "deflate"
+    ],
+    "DependencyN": 0
+  },
+  "aead": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "aes": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "aes-ctr": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "aes-soft": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "aesni": {
+    "Dependents": [
+      "aes",
+      "aes-ctr"
+    ],
+    "DependencyN": 2
+  },
+  "aho-corasick": {
+    "Dependents": [
+      "regex"
+    ],
+    "DependencyN": 1
+  },
+  "anyhow": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "array_tool": {
+    "Dependents": [
+      "jsonpath_lib"
+    ],
+    "DependencyN": 0
+  },
+  "assert_matches": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "base64": {
+    "Dependents": [
+      "jsonwebtoken",
+      "rustls"
+    ],
+    "DependencyN": 0
+  },
+  "bincode": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "bitvec": {
+    "Dependents": [
+      "parity-scale-codec-derive",
+      "parity-scale-codec"
+    ],
+    "DependencyN": 1
+  },
+  "blake-hash": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "blake2": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "blobby": {
+    "Dependents": [
+      "digest",
+      "crypto-mac",
+      "stream-cipher",
+      "block-cipher-trait"
+    ],
+    "DependencyN": 1
+  },
+  "block-buffer": {
+    "Dependents": [
+      "sha-1",
+      "md4",
+      "groestl",
+      "skein-hash",
+      "md2",
+      "whirlpool",
+      "md-5",
+      "ripemd320",
+      "groestl-aesni",
+      "blake-hash",
+      "ripemd160",
+      "sha2",
+      "jh-x86_64",
+      "gost94",
+      "sha3",
+      "streebog"
+    ],
+    "DependencyN": 2
+  },
+  "block-cipher-trait": {
+    "Dependents": [
+      "ctr",
+      "cfb8",
+      "ofb",
+      "cfb-mode",
+      "block-modes",
+      "rc2",
+      "cmac",
+      "aes-soft",
+      "aes",
+      "cast5",
+      "aesni",
+      "twofish",
+      "blowfish",
+      "magma",
+      "kuznyechik",
+      "threefish-cipher",
+      "des"
+    ],
+    "DependencyN": 1
+  },
+  "block-modes": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "block-padding": {
+    "Dependents": [
+      "skein-hash",
+      "block-buffer",
+      "block-modes"
+    ],
+    "DependencyN": 0
+  },
+  "blowfish": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "byte-slice-cast": {
+    "Dependents": [
+      "parity-scale-codec-derive",
+      "parity-scale-codec"
+    ],
+    "DependencyN": 0
+  },
+  "byteorder": {
+    "Dependents": [
+      "rsa",
+      "num-bigint-dig",
+      "c2-chacha",
+      "block-buffer",
+      "etcommon-bigint",
+      "image",
+      "bincode",
+      "snap",
+      "salsa20",
+      "aes-soft",
+      "jpeg-decoder",
+      "ucd-util",
+      "chacha20",
+      "cast5",
+      "parity-wasm",
+      "twofish",
+      "blowfish",
+      "magma",
+      "etcommon-rlp",
+      "threefish-cipher",
+      "tiff",
+      "des",
+      "deflate",
+      "blobby"
+    ],
+    "DependencyN": 0
+  },
+  "bytes": {
+    "Dependents": [
+      "kvdb",
+      "protobuf",
+      "prost",
+      "http"
+    ],
+    "DependencyN": 1
+  },
+  "c2-chacha": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "cast5": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "cfb-mode": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "cfb8": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "chacha20": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "chrono": {
+    "Dependents": [
+      "jsonwebtoken",
+      "yasna"
+    ],
+    "DependencyN": 4
+  },
+  "cmac": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "color_quant": {
+    "Dependents": [
+      "gif"
+    ],
+    "DependencyN": 0
+  },
+  "crc32fast": {
+    "Dependents": [
+      "gzip-header",
+      "miniz_oxide",
+      "png",
+      "libflate"
+    ],
+    "DependencyN": 0
+  },
+  "crypto-mac": {
+    "Dependents": [
+      "hmac",
+      "blake2",
+      "cmac",
+      "daa"
+    ],
+    "DependencyN": 2
+  },
+  "ctr": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "daa": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "data-url": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "deflate": {
+    "Dependents": [
+      "png"
+    ],
+    "DependencyN": 3
+  },
+  "des": {
+    "Dependents": [
+      "daa"
+    ],
+    "DependencyN": 2
+  },
+  "digest": {
+    "Dependents": [
+      "sha-1",
+      "sputnikvm",
+      "md4",
+      "groestl",
+      "libsecp256k1",
+      "hmac",
+      "skein-hash",
+      "md2",
+      "whirlpool",
+      "blake2",
+      "md-5",
+      "ripemd320",
+      "groestl-aesni",
+      "blake-hash",
+      "ripemd160",
+      "sha2",
+      "jh-x86_64",
+      "gost94",
+      "sha3",
+      "streebog"
+    ],
+    "DependencyN": 1
+  },
+  "elastic-array": {
+    "Dependents": [
+      "kvdb",
+      "etcommon-rlp"
+    ],
+    "DependencyN": 1
+  },
+  "encoding_rs": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "env_logger": {
+    "Dependents": [
+      "jsonpath_lib",
+      "quickcheck"
+    ],
+    "DependencyN": 4
+  },
+  "erased-serde": {
+    "Dependents": [
+      "typetag"
+    ],
+    "DependencyN": 1
+  },
+  "etcommon-bigint": {
+    "Dependents": [
+      "sputnikvm",
+      "etcommon-bloom",
+      "etcommon-block-core",
+      "etcommon-block",
+      "etcommon-trie"
+    ],
+    "DependencyN": 4
+  },
+  "etcommon-block": {
+    "Dependents": [
+      "sputnikvm"
+    ],
+    "DependencyN": 7
+  },
+  "etcommon-block-core": {
+    "Dependents": [
+      "sputnikvm",
+      "etcommon-block"
+    ],
+    "DependencyN": 3
+  },
+  "etcommon-bloom": {
+    "Dependents": [
+      "etcommon-block"
+    ],
+    "DependencyN": 3
+  },
+  "etcommon-hexutil": {
+    "Dependents": [
+      "etcommon-bigint",
+      "etcommon-rlp"
+    ],
+    "DependencyN": 0
+  },
+  "etcommon-rlp": {
+    "Dependents": [
+      "sputnikvm",
+      "etcommon-bloom",
+      "etcommon-block-core",
+      "etcommon-bigint",
+      "etcommon-block",
+      "etcommon-trie"
+    ],
+    "DependencyN": 3
+  },
+  "etcommon-trie": {
+    "Dependents": [
+      "etcommon-block"
+    ],
+    "DependencyN": 3
+  },
+  "failure": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "fnv": {
+    "Dependents": [
+      "http"
+    ],
+    "DependencyN": 0
+  },
+  "getrandom": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "gif": {
+    "Dependents": [
+      "image"
+    ],
+    "DependencyN": 2
+  },
+  "gost94": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "groestl": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "groestl-aesni": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "gzip-header": {
+    "Dependents": [
+      "deflate"
+    ],
+    "DependencyN": 1
+  },
+  "heapsize": {
+    "Dependents": [
+      "linked-hash-map",
+      "etcommon-bigint",
+      "elastic-array"
+    ],
+    "DependencyN": 0
+  },
+  "hex": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "hex-literal": {
+    "Dependents": [
+      "jh-x86_64"
+    ],
+    "DependencyN": 0
+  },
+  "hmac": {
+    "Dependents": [
+      "hmac-drbg"
+    ],
+    "DependencyN": 2
+  },
+  "hmac-drbg": {
+    "Dependents": [
+      "libsecp256k1"
+    ],
+    "DependencyN": 1
+  },
+  "http": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "http_req": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "humantime": {
+    "Dependents": [
+      "env_logger"
+    ],
+    "DependencyN": 1
+  },
+  "idna": {
+    "Dependents": [
+      "percent-encoding",
+      "idna",
+      "data-url",
+      "url"
+    ],
+    "DependencyN": 3
+  },
+  "image": {
+    "Dependents": null,
+    "DependencyN": 8
+  },
+  "indexmap": {
+    "Dependents": [
+      "serde_json"
+    ],
+    "DependencyN": 1
+  },
+  "inflate": {
+    "Dependents": [
+      "png"
+    ],
+    "DependencyN": 1
+  },
+  "integer-encoding": {
+    "Dependents": [
+      "rusty-leveldb"
+    ],
+    "DependencyN": 0
+  },
+  "inventory": {
+    "Dependents": [
+      "typetag"
+    ],
+    "DependencyN": 0
+  },
+  "iovec": {
+    "Dependents": [
+      "mio"
+    ],
+    "DependencyN": 0
+  },
+  "itertools": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "itoa": {
+    "Dependents": [
+      "serde_json",
+      "http"
+    ],
+    "DependencyN": 0
+  },
+  "jh-x86_64": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "jpeg-decoder": {
+    "Dependents": [
+      "image"
+    ],
+    "DependencyN": 1
+  },
+  "jsonpath_lib": {
+    "Dependents": null,
+    "DependencyN": 5
+  },
+  "jsonwebtoken": {
+    "Dependents": null,
+    "DependencyN": 6
+  },
+  "kuznyechik": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "kvdb": {
+    "Dependents": [
+      "kvdb-memorydb"
+    ],
+    "DependencyN": 2
+  },
+  "kvdb-memorydb": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "libflate": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "libsecp256k1": {
+    "Dependents": [
+      "sputnikvm",
+      "etcommon-block"
+    ],
+    "DependencyN": 5
+  },
+  "linked-hash-map": {
+    "Dependents": [
+      "toml"
+    ],
+    "DependencyN": 2
+  },
+  "log": {
+    "Dependents": [
+      "sputnikvm",
+      "mio",
+      "jsonpath_lib",
+      "quickcheck",
+      "getrandom",
+      "rustls",
+      "env_logger",
+      "rand"
+    ],
+    "DependencyN": 1
+  },
+  "lzw": {
+    "Dependents": [
+      "gif",
+      "tiff"
+    ],
+    "DependencyN": 0
+  },
+  "magma": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "matches": {
+    "Dependents": [
+      "percent-encoding",
+      "unicode-bidi",
+      "idna",
+      "data-url",
+      "url"
+    ],
+    "DependencyN": 0
+  },
+  "matrixmultiply": {
+    "Dependents": [
+      "rulinalg",
+      "ndarray"
+    ],
+    "DependencyN": 0
+  },
+  "md-5": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "md2": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "md4": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "md5": {
+    "Dependents": [
+      "uuid"
+    ],
+    "DependencyN": 0
+  },
+  "memchr": {
+    "Dependents": [
+      "regex",
+      "aho-corasick"
+    ],
+    "DependencyN": 0
+  },
+  "miniz_oxide": {
+    "Dependents": [
+      "miniz_oxide",
+      "tiff"
+    ],
+    "DependencyN": 1
+  },
+  "mio": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "ndarray": {
+    "Dependents": null,
+    "DependencyN": 5
+  },
+  "net2": {
+    "Dependents": [
+      "mio"
+    ],
+    "DependencyN": 0
+  },
+  "num": {
+    "Dependents": [
+      "rust-base58",
+      "rusty-machine",
+      "rulinalg"
+    ],
+    "DependencyN": 5
+  },
+  "num-bigint-dig": {
+    "Dependents": null,
+    "DependencyN": 7
+  },
+  "num-complex": {
+    "Dependents": [
+      "num",
+      "ndarray"
+    ],
+    "DependencyN": 3
+  },
+  "num-integer": {
+    "Dependents": [
+      "num-rational",
+      "rsa",
+      "num-bigint-dig",
+      "num",
+      "num-iter",
+      "chrono",
+      "ndarray"
+    ],
+    "DependencyN": 1
+  },
+  "num-iter": {
+    "Dependents": [
+      "rsa",
+      "num-bigint-dig",
+      "image",
+      "num"
+    ],
+    "DependencyN": 2
+  },
+  "num-rational": {
+    "Dependents": [
+      "wasmi",
+      "image",
+      "num"
+    ],
+    "DependencyN": 3
+  },
+  "num-traits": {
+    "Dependents": [
+      "num-rational",
+      "rsa",
+      "num-bigint-dig",
+      "num-complex",
+      "wasmi",
+      "image",
+      "num",
+      "num-iter",
+      "num-integer",
+      "chrono",
+      "ndarray"
+    ],
+    "DependencyN": 0
+  },
+  "ofb": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "parity-scale-codec": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "parity-scale-codec-derive": {
+    "Dependents": [
+      "parity-scale-codec-derive",
+      "parity-scale-codec"
+    ],
+    "DependencyN": 3
+  },
+  "parity-wasm": {
+    "Dependents": [
+      "wasmi"
+    ],
+    "DependencyN": 1
+  },
+  "percent-encoding": {
+    "Dependents": [
+      "percent-encoding",
+      "idna",
+      "data-url",
+      "url"
+    ],
+    "DependencyN": 3
+  },
+  "png": {
+    "Dependents": [
+      "image"
+    ],
+    "DependencyN": 3
+  },
+  "ppv-lite86": {
+    "Dependents": [
+      "c2-chacha"
+    ],
+    "DependencyN": 0
+  },
+  "prost": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "protected_fs_rs": {
+    "Dependents": [
+      "rusty-leveldb"
+    ],
+    "DependencyN": 1
+  },
+  "protobuf": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "quick-error": {
+    "Dependents": [
+      "humantime"
+    ],
+    "DependencyN": 0
+  },
+  "quickcheck": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "rand": {
+    "Dependents": [
+      "rsa",
+      "libsecp256k1",
+      "num-bigint-dig",
+      "num-complex",
+      "quickcheck",
+      "rusty-leveldb",
+      "uuid"
+    ],
+    "DependencyN": 1
+  },
+  "rc2": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "rdrand": {
+    "Dependents": [
+      "protected_fs_rs"
+    ],
+    "DependencyN": 0
+  },
+  "regex": {
+    "Dependents": [
+      "env_logger"
+    ],
+    "DependencyN": 3
+  },
+  "ring": {
+    "Dependents": [
+      "jsonwebtoken",
+      "sct",
+      "rustls",
+      "webpki"
+    ],
+    "DependencyN": 0
+  },
+  "ripemd160": {
+    "Dependents": [
+      "sputnikvm"
+    ],
+    "DependencyN": 2
+  },
+  "ripemd320": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "rle-decode-fast": {
+    "Dependents": [
+      "libflate"
+    ],
+    "DependencyN": 0
+  },
+  "rsa": {
+    "Dependents": null,
+    "DependencyN": 7
+  },
+  "rulinalg": {
+    "Dependents": [
+      "rusty-machine"
+    ],
+    "DependencyN": 4
+  },
+  "rust-base58": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "rust-crypto": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "rustc-serialize": {
+    "Dependents": [
+      "rust-crypto",
+      "chrono"
+    ],
+    "DependencyN": 0
+  },
+  "rustls": {
+    "Dependents": [
+      "http_req"
+    ],
+    "DependencyN": 5
+  },
+  "rusty-leveldb": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "rusty-machine": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "salsa20": {
+    "Dependents": null,
+    "DependencyN": 3
+  },
+  "salsa20-core": {
+    "Dependents": [
+      "salsa20",
+      "chacha20"
+    ],
+    "DependencyN": 1
+  },
+  "sct": {
+    "Dependents": [
+      "rustls"
+    ],
+    "DependencyN": 1
+  },
+  "serde": {
+    "Dependents": [
+      "num-rational",
+      "encoding_rs",
+      "rsa",
+      "percent-encoding",
+      "typetag",
+      "bytes",
+      "linked-hash-map",
+      "num-bigint-dig",
+      "num-complex",
+      "unicode-bidi",
+      "log",
+      "serde_cbor",
+      "rusty-machine",
+      "jsonpath_lib",
+      "erased-serde",
+      "wabt",
+      "parity-scale-codec-derive",
+      "wasmi",
+      "jsonwebtoken",
+      "serde_bytes",
+      "parity-scale-codec",
+      "uuid",
+      "bincode",
+      "protobuf",
+      "serde_json",
+      "bitvec",
+      "smallvec",
+      "idna",
+      "rulinalg",
+      "serde-big-array",
+      "data-url",
+      "indexmap",
+      "url",
+      "sha1",
+      "toml",
+      "chrono",
+      "ndarray"
+    ],
+    "DependencyN": 1
+  },
+  "serde-big-array": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "serde_bytes": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "serde_cbor": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "serde_derive": {
+    "Dependents": [
+      "rusty-machine",
+      "wabt",
+      "jsonwebtoken",
+      "protobuf",
+      "rulinalg",
+      "serde-big-array",
+      "serde"
+    ],
+    "DependencyN": 0
+  },
+  "serde_json": {
+    "Dependents": [
+      "jsonpath_lib",
+      "jsonwebtoken"
+    ],
+    "DependencyN": 3
+  },
+  "sha-1": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "sha1": {
+    "Dependents": [
+      "uuid"
+    ],
+    "DependencyN": 1
+  },
+  "sha2": {
+    "Dependents": [
+      "sputnikvm",
+      "libsecp256k1"
+    ],
+    "DependencyN": 2
+  },
+  "sha3": {
+    "Dependents": [
+      "sputnikvm",
+      "etcommon-bloom",
+      "etcommon-block-core",
+      "etcommon-block",
+      "etcommon-trie"
+    ],
+    "DependencyN": 2
+  },
+  "skein-hash": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "slab": {
+    "Dependents": [
+      "mio"
+    ],
+    "DependencyN": 0
+  },
+  "smallvec": {
+    "Dependents": [
+      "unicode-normalization",
+      "num-bigint-dig"
+    ],
+    "DependencyN": 1
+  },
+  "snap": {
+    "Dependents": [
+      "rusty-leveldb"
+    ],
+    "DependencyN": 1
+  },
+  "sputnikvm": {
+    "Dependents": null,
+    "DependencyN": 10
+  },
+  "stream-cipher": {
+    "Dependents": [
+      "ctr",
+      "cfb8",
+      "c2-chacha",
+      "ofb",
+      "cfb-mode",
+      "salsa20",
+      "salsa20-core",
+      "chacha20",
+      "aesni",
+      "aes-ctr"
+    ],
+    "DependencyN": 1
+  },
+  "streebog": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "subtle": {
+    "Dependents": [
+      "rsa",
+      "libsecp256k1",
+      "crypto-mac",
+      "universal-hash"
+    ],
+    "DependencyN": 0
+  },
+  "take_mut": {
+    "Dependents": [
+      "libflate"
+    ],
+    "DependencyN": 0
+  },
+  "termcolor": {
+    "Dependents": [
+      "env_logger"
+    ],
+    "DependencyN": 0
+  },
+  "thiserror": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "thread-id": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "thread_local": {
+    "Dependents": [
+      "regex"
+    ],
+    "DependencyN": 0
+  },
+  "threadpool": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "threefish-cipher": {
+    "Dependents": [
+      "skein-hash"
+    ],
+    "DependencyN": 2
+  },
+  "threshold-secret-sharing": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "tiff": {
+    "Dependents": [
+      "image"
+    ],
+    "DependencyN": 3
+  },
+  "toml": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "twofish": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "typetag": {
+    "Dependents": [
+      "wasmi"
+    ],
+    "DependencyN": 3
+  },
+  "ucd-util": {
+    "Dependents": [
+      "ucd-util"
+    ],
+    "DependencyN": 1
+  },
+  "unicase": {
+    "Dependents": [
+      "http_req"
+    ],
+    "DependencyN": 0
+  },
+  "unicode-bidi": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "unicode-normalization": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "universal-hash": {
+    "Dependents": null,
+    "DependencyN": 1
+  },
+  "url": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "utf8-ranges": {
+    "Dependents": null,
+    "DependencyN": 0
+  },
+  "uuid": {
+    "Dependents": null,
+    "DependencyN": 4
+  },
+  "wabt": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "wasmi": {
+    "Dependents": null,
+    "DependencyN": 5
+  },
+  "webpki": {
+    "Dependents": [
+      "webpki-roots",
+      "rustls",
+      "http_req"
+    ],
+    "DependencyN": 1
+  },
+  "webpki-roots": {
+    "Dependents": [
+      "http_req"
+    ],
+    "DependencyN": 1
+  },
+  "whirlpool": {
+    "Dependents": null,
+    "DependencyN": 2
+  },
+  "yasna": {
+    "Dependents": null,
+    "DependencyN": 1
+  }
+}

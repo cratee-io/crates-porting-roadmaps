@@ -1,9 +1,11 @@
 package main
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
@@ -29,12 +31,18 @@ var sepecials = map[string]string{
 	"c2-chacha":           "stream-ciphers/chacha",
 	"blake-hash":          "hashes/blake",
 	"ppv-lite86":          "utils-simd/ppv-lite86",
+	//"percent-encoding":"percent-encoding",
 }
 
 type DependencyManifest struct {
 	Git    string
 	Branch string
 	Tag    string
+}
+
+type TinyDependency struct {
+	Dependents  []string
+	DependencyN int
 }
 
 func newTOML(reader io.Reader) (*viper.Viper, error) {
@@ -65,7 +73,8 @@ func readDependencies(url string) ([]string, error) {
 	}
 
 	uniques := make(map[string]struct{})
-	dependencieTypes := []string{"dependencies", "build-dependencies", "dev-dependencies"}
+	//dependencieTypes := []string{"dependencies", "build-dependencies", "dev-dependencies"}
+	dependencieTypes := []string{"dependencies"}
 
 	for _, d := range dependencieTypes {
 		if !toml.IsSet(d) {
@@ -110,7 +119,7 @@ func main() {
 	//fmt.Println(dependencies)
 
 	//depsGraph := make(map[string]map[string]struct{})
-	depsGraph := make(map[string]int)
+	depsGraph := make(map[string]TinyDependency)
 
 	updateDepsGraph := func(crate, tomlURL string) error {
 		deps, err := readDependencies(tomlURL)
@@ -126,12 +135,16 @@ func main() {
 				continue
 			}
 
-			//if _, ok := depsGraph[d]; !ok {
-			//	//depsGraph[d] = make(map[string]struct{})
-			//}
-			//depsGraph[d][k] = struct{}{}
+			/*
+				if _, ok := depsGraph[crate]; !ok {
+					depsGraph[crate] = make(map[string]struct{})
+				}
+				depsGraph[crate][d] = struct{}{}
+			*/
 
-			depsGraph[d]++
+			x, y := depsGraph[crate], depsGraph[d]
+			x.DependencyN, y.Dependents = x.DependencyN+1, append(y.Dependents, crate)
+			depsGraph[crate], depsGraph[d] = x, y
 		}
 
 		return nil
@@ -139,44 +152,6 @@ func main() {
 
 	const github = "https://github.com"
 	const rawcontent = "https://raw.githubusercontent.com"
-
-	/*
-		{
-			const crate = "failure"
-			vv := dependencies[crate]
-
-			url := strings.ReplaceAll(vv.Git, github, rawcontent)
-			url = strings.TrimSuffix(url, ".git")
-
-			revision := vv.Tag
-			if revision == "" {
-				revision = vv.Branch
-			}
-			if revision == "" {
-				revision = "master"
-			}
-
-			k := crate
-
-			if kk, ok := sepecials[k]; ok {
-				k = kk
-			}
-
-			if err := updateDepsGraph(k, url+"/"+revision+"/Cargo.toml"); err != nil {
-				fmt.Println("err1", err)
-			}
-
-			if err := updateDepsGraph(k, url+"/"+revision+"/"+k+"/Cargo.toml"); err != nil {
-				fmt.Println("err2", err)
-			}
-
-			crateName := strings.ReplaceAll(k, "-", "")
-			if err := updateDepsGraph(k, url+"/"+revision+"/"+crateName+"/Cargo.toml"); err != nil {
-				fmt.Println("err3", err)
-			}
-		}
-		fmt.Println("--------- end test")
-	*/
 
 	fmt.Println("#(deps) =", len(dependencies))
 
@@ -193,7 +168,9 @@ func main() {
 			revision = "master"
 		}
 
-		depsGraph[k]++
+		if _, ok := depsGraph[k]; !ok {
+			depsGraph[k] = TinyDependency{}
+		}
 
 		if err := updateDepsGraph(k, url+"/"+revision+"/Cargo.toml"); err == nil {
 			continue
@@ -215,9 +192,9 @@ func main() {
 		failed = append(failed, k)
 	}
 
-	for k, v := range depsGraph {
-		fmt.Println(k, v)
-	}
+	//for k, v := range depsGraph {
+	//	fmt.Println(k, v)
+	//}
 
 	fmt.Println("--------")
 	fmt.Println("nOk:", len(depsGraph))
@@ -233,5 +210,14 @@ func main() {
 		if _, ok := dependencies[k]; !ok {
 			fmt.Println("[-]", k)
 		}
+	}
+
+	outJSON, err := json.MarshalIndent(depsGraph, "", "  ")
+	if err != nil {
+		panic(err)
+	}
+
+	if err := ioutil.WriteFile("dependencies.json", outJSON, 0644); err != nil {
+		panic(err)
 	}
 }
