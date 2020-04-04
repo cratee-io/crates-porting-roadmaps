@@ -54,7 +54,7 @@ func main() {
 		}
 
 		oks[ok] = struct{}{}
-		fmt.Printf("%d: %s\n", i, ok)
+		fmt.Printf("%03d: %s\n", i, ok)
 	}
 
 	fmt.Println("-------")
