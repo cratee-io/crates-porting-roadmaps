@@ -2,9 +2,29 @@
 
 This repository implements a tool building dependency graph about SGX-adapted crates based on [sgx-world](https://github.com/dingelish/sgx-world).
 
+## Goal
+
+Port all crates listed in the Dependency Graph section based on different versions of 
+[teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk).
+
+## Porting Workflow
+
+1. Fork the project
+2. Upgrade to rust 2018
+3. Format the project
+4. Commit the changes all above 
+5. Replace the `std` library with `sgx_tstd`
+6. Add tests under the `tests/sgx` folder
+7. Make sure tests run well
+8. Make another commit to save the changes introduced by porting
+9. Push the commit to a branch of pattern `rsgx{major.minor.patch}`, where `major`, `minor` and
+`patch` corresponds to the tags as those of [teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk). For example, if porting to teaclave-sgx-sdk@v1.1.1, then we should
+push to branch `rsgx1.1.1`.
+
 ## Dependency Graph
 
 The crate of smaller line number don't depend on those of larger line number.
+
 no. | crate | versions
 ----|-------|---------
 000 | [adler32](https://github.com/mesalock-linux/adler32-rs-sgx/blob/master/Cargo.toml) | 
