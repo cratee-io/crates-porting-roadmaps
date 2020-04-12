@@ -25,16 +25,18 @@ push to branch `rsgx1.1.1`.
 
 The crate of smaller line number don't depend on those of larger line number.
 
+> `versions` specify the teaclave-sgx-sdk version the porting bases on.
+
 no. | crate | versions
 ----|-------|---------
-000 | [adler32](https://github.com/mesalock-linux/adler32-rs-sgx/blob/master/Cargo.toml) | 
-001 | [integer-encoding](https://github.com/mesalock-linux/integer-encoding-rs-sgx/blob/master/Cargo.toml) | 
-002 | [matches](https://github.com/mesalock-linux/rust-std-candidates-sgx/blob/master/matches/Cargo.toml) | 
-003 | [inventory](https://github.com/mesalock-linux/inventory-sgx/blob/master/Cargo.toml) | 
-004 | [parity-scale-codec-derive](https://github.com/mesalock-linux/parity-scale-codec-sgx/blob/master/derive/Cargo.toml) | 
-005 | [hex-literal](https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/hex-literal/Cargo.toml) | 
-006 | [thiserror](https://github.com/mesalock-linux/thiserror-sgx/blob/master/Cargo.toml) | 
-007 | [thread-id](https://github.com/mesalock-linux/thread-id-sgx/blob/master/Cargo.toml) | 
+000 | [adler32](https://github.com/mesalock-linux/adler32-rs-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/adler32-rs/tree/rsgx1.1.1)
+001 | [integer-encoding](https://github.com/mesalock-linux/integer-encoding-rs-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/integer-encoding-rs/tree/rsgx1.1.1)
+002 | [matches](https://github.com/mesalock-linux/rust-std-candidates-sgx/blob/master/matches/Cargo.toml) | [v1.1.1](https://github.com/sammyne/rust-std-candidates/tree/rsgx1.1.1)
+003 | [inventory](https://github.com/mesalock-linux/inventory-sgx/blob/master/Cargo.toml) | support `no_std`
+004 | [parity-scale-codec-derive](https://github.com/mesalock-linux/parity-scale-codec-sgx/blob/master/derive/Cargo.toml) | macro crate
+005 | [hex-literal](https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/hex-literal/Cargo.toml) | support `no_std`
+006 | [thiserror](https://github.com/mesalock-linux/thiserror-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/thiserror/tree/rsgx1.1.1)
+007 | [thread-id](https://github.com/mesalock-linux/thread-id-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/thread-id/tree/rsgx1.1.1)
 008 | [threadpool](https://github.com/mesalock-linux/rust-threadpool-sgx/blob/master/Cargo.toml) | 
 009 | [itoa](https://github.com/mesalock-linux/itoa-sgx/blob/master/Cargo.toml) | 
 010 | [ppv-lite86](https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/utils-simd/ppv-lite86/Cargo.toml) | 
