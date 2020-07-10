@@ -37,17 +37,17 @@ no. | crate | versions
 005 | [hex-literal](https://github.com/mesalock-linux/rustcrypto-utils-sgx/blob/master/hex-literal/Cargo.toml) | support `no_std`
 006 | [thiserror](https://github.com/mesalock-linux/thiserror-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/thiserror/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/thiserror/tree/rsgx1.1.2)
 007 | [thread-id](https://github.com/mesalock-linux/thread-id-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/thread-id/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/thread-id/tree/rsgx1.1.2)
-008 | [threadpool](https://github.com/mesalock-linux/rust-threadpool-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/rust-threadpool/tree/rsgx1.1.1)
-009 | [itoa](https://github.com/mesalock-linux/itoa-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/itoa/tree/rsgx1.1.1)
+008 | [threadpool](https://github.com/mesalock-linux/rust-threadpool-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/rust-threadpool/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/rust-threadpool/tree/rsgx1.1.2)
+009 | [itoa](https://github.com/mesalock-linux/itoa-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/itoa/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/itoa/tree/rsgx1.1.2)
 010 | [ppv-lite86](https://github.com/mesalock-linux/cryptocorrosion-sgx/blob/master/utils-simd/ppv-lite86/Cargo.toml) | [`no_std`](https://github.com/sammyne/cryptocorrosion/tree/rsgx1.1.1/utils-simd/ppv-lite86)
 011 | [color_quant](https://github.com/mesalock-linux/color_quant-sgx/blob/master/Cargo.toml) |  [v1.1.1](https://github.com/sammyne/color_quant/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/color_quant/tree/rsgx1.1.2)
 012 | [md5](https://github.com/mesalock-linux/md5-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/md5-rs/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/md5-rs/tree/rsgx1.1.2)
-013 | [threshold-secret-sharing](https://github.com/mesalock-linux/rust-threshold-secret-sharing-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/rust-threshold-secret-sharing/tree/rsgx1.1.1)
-014 | [matrixmultiply](https://github.com/mesalock-linux/matrixmultiply-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/matrixmultiply/tree/rsgx1.1.1)
-015 | [unicase](https://github.com/mesalock-linux/unicase-sgx/blob/master/Cargo.toml) | 
+013 | [threshold-secret-sharing](https://github.com/mesalock-linux/rust-threshold-secret-sharing-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/rust-threshold-secret-sharing/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/rust-threshold-secret-sharing/tree/rsgx1.1.2)
+014 | [matrixmultiply](https://github.com/mesalock-linux/matrixmultiply-sgx/blob/master/Cargo.toml) | [v1.1.1](https://github.com/sammyne/matrixmultiply/tree/rsgx1.1.1), [v1.1.2](https://github.com/sammyne/matrixmultiply/tree/rsgx1.1.2)
+015 | [unicase](https://github.com/mesalock-linux/unicase-sgx/blob/master/Cargo.toml) | [v1.1.2](https://github.com/sammyne/unicase/tree/rsgx1.1.2)
 016 | [iovec](https://github.com/mesalock-linux/iovec-sgx/blob/master/Cargo.toml) | 
 017 | [array_tool](https://github.com/mesalock-linux/array_tool-sgx/blob/master/Cargo.toml) | 
-018 | [memchr](https://github.com/mesalock-linux/rust-memchr-sgx/blob/master/Cargo.toml) | 
+018 | [memchr](https://github.com/mesalock-linux/rust-memchr-sgx/blob/master/Cargo.toml) | [v1.1.2](https://github.com/sammyne/rust-memchr/tree/rsgx1.1.2)
 019 | [etcommon-hexutil](https://github.com/mesalock-linux/etcommon-rs-sgx/blob/master/hexutil/Cargo.toml) | 
 020 | [hex](https://github.com/mesalock-linux/rust-hex-sgx/blob/master/Cargo.toml) | 
 021 | [ring](https://github.com/mesalock-linux/ring-sgx/blob/v0.16.5/Cargo.toml) | 
