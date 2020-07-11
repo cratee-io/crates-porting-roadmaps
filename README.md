@@ -70,9 +70,9 @@ no. | crate | versions
 038 | [percent-encoding](https://github.com/mesalock-linux/rust-url-sgx/blob/master/percent_encoding/Cargo.toml) | 
 039 | [rle-decode-fast](https://github.com/mesalock-linux/rle-decode-helper-sgx/blob/master/Cargo.toml) | 
 040 | [anyhow](https://github.com/mesalock-linux/anyhow-sgx/blob/master/Cargo.toml) | 
-041 | [fnv](https://github.com/mesalock-linux/rust-fnv-sgx/blob/master/Cargo.toml) | 
+041 | [fnv](https://github.com/mesalock-linux/rust-fnv-sgx/blob/master/Cargo.toml) | [v1.1.2](https://github.com/sammyne/rust-fnv/tree/rsgx1.1.2)
 042 | [num-traits](https://github.com/mesalock-linux/num-traits-sgx/blob/master/Cargo.toml) | 
-043 | [serde_derive](https://github.com/mesalock-linux/serde-sgx/blob/master/serde_derive/Cargo.toml) | 
+043 | [serde_derive](https://github.com/mesalock-linux/serde-sgx/blob/master/serde_derive/Cargo.toml) | [v1.1.2](https://github.com/sammyne/serde/tree/rsgx1.1.2)
 044 | [crc32fast](https://github.com/mesalock-linux/rust-crc32fast-sgx/blob/master/Cargo.toml) | 
 045 | [failure](https://github.com/mesalock-linux/failure-sgx/blob/master/Cargo.toml) | 
 046 | [quick-error](https://github.com/mesalock-linux/quick-error-sgx/blob/master/Cargo.toml) | 
@@ -95,7 +95,7 @@ no. | crate | versions
 063 | [gif](https://github.com/mesalock-linux/image-gif-sgx/blob/master/Cargo.toml) | 
 064 | [rust-crypto](https://github.com/mesalock-linux/rust-crypto-sgx/blob/master/Cargo.toml) | 
 065 | [num-integer](https://github.com/mesalock-linux/num-integer-sgx/blob/master/Cargo.toml) | 
-066 | [serde](https://github.com/mesalock-linux/serde-sgx/blob/master/serde/Cargo.toml) | 
+066 | [serde](https://github.com/mesalock-linux/serde-sgx/blob/master/serde/Cargo.toml) | [v1.1.2](https://github.com/sammyne/serde/tree/rsgx1.1.2)
 067 | [libflate](https://github.com/mesalock-linux/libflate-sgx/blob/master/Cargo.toml) | 
 068 | [gzip-header](https://github.com/mesalock-linux/gzip-header-sgx/blob/master/Cargo.toml) | 
 069 | [humantime](https://github.com/mesalock-linux/humantime-sgx/blob/master/Cargo.toml) | 
@@ -117,7 +117,7 @@ no. | crate | versions
 085 | [bytes](https://github.com/mesalock-linux/bytes-sgx/blob/master/Cargo.toml) | 
 086 | [unicode-bidi](https://github.com/mesalock-linux/unicode-bidi-sgx/blob/master/Cargo.toml) | 
 087 | [encoding_rs](https://github.com/mesalock-linux/encoding_rs-sgx/blob/master/Cargo.toml) | 
-088 | [log](https://github.com/mesalock-linux/log-sgx/blob/master/Cargo.toml) | 
+088 | [log](https://github.com/mesalock-linux/log-sgx/blob/master/Cargo.toml) | [v1.1.2](https://github.com/sammyne/log-rs/tree/rsgx1.1.2)
 089 | [bincode](https://github.com/mesalock-linux/bincode-sgx/blob/master/Cargo.toml) | 
 090 | [wabt](https://github.com/mesalock-linux/wabt-rs-sgx/blob/v0.9-core/Cargo.toml) | 
 091 | [serde-big-array](https://github.com/mesalock-linux/serde-big-array-sgx/blob/master/Cargo.toml) | 
