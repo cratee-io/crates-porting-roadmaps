@@ -173,7 +173,7 @@ no. | crate | versions
 141 | [rustls](https://github.com/mesalock-linux/rustls/blob/mesalock_sgx/Cargo.toml) | 
 142 | [rand](https://github.com/mesalock-linux/rand-sgx/blob/v0.6.5_sgx1.1.1/Cargo.toml) | 
 143 | [mio](https://github.com/mesalock-linux/mio-sgx/blob/v0.6_sgx_1.1.1/Cargo.toml) | 
-144 | [getrandom](https://github.com/mesalock-linux/getrandom-sgx/blob/master/Cargo.toml) | 
+144 | [getrandom](https://github.com/mesalock-linux/getrandom-sgx/blob/master/Cargo.toml) | [v1.1.2](https://github.com/sammyne/getrandom/tree/rsgx1.1.2)
 145 | [toml](https://github.com/mesalock-linux/toml-rs-sgx/blob/master/Cargo.toml) | 
 146 | [typetag](https://github.com/mesalock-linux/typetag-sgx/blob/master/Cargo.toml) | 
 147 | [unicode-normalization](https://github.com/mesalock-linux/unicode-normalization-sgx/blob/master/Cargo.toml) | 
